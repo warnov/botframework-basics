@@ -1,0 +1,45 @@
+meta {
+  name: Local Simple Message
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3978/api/messages
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "text": "hello from bruno5",  
+    "type": "message",  
+    "conversation": {
+      "id": "1fec2180-bd8a-11ef-a157-0f227f54e04f|livechat"
+    },
+    "id": "225a8970-bd8a-11ef-a157-0f227f54e04g",
+    "recipient": {
+      "id": "1fe1e850-bd8a-11ef-a946-8f705af1df0f"
+    },  
+    "serviceUrl": "http://localhost:52232"
+  }
+}
+
+docs {
+  The following is the minimum payload to succesfuly execute a call to the Bot in the lower number port. It then will rediret the message to the Bot Service emulation in the high port number, and it will orchetrate the delivery (in this case, sending the message to the Bot Emulator UI):
+  
+  {
+    "text": "hello from bruno5",  
+    "type": "message",  
+    "conversation": {
+      "id": "1fec2180-bd8a-11ef-a157-0f227f54e04f|livechat"
+    },
+    "id": "225a8970-bd8a-11ef-a157-0f227f54e04g",
+    "recipient": {
+      "id": "1fe1e850-bd8a-11ef-a946-8f705af1df0f"
+    },  
+    "serviceUrl": "http://localhost:52232"
+  }
+  
+  Those Ids are produced by the Bot emulation service once a connection is executed for the first time to the Bot in the lower ports... this make it comunicate to the Bot Service emulation to get those ids.
+}

@@ -1,0 +1,3 @@
+resourceGroup: rg_botframework_basics
+identityResourceName: id-bot-rg_botframework_basics
+clientId: 22ce8e89-6f22-4651-8de0-a67ec5abfd61

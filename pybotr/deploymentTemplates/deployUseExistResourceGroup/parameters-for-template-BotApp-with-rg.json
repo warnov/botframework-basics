@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServiceName": {
+            "value": "warbasicbot"
+        },
+        "existingAppServicePlanName": {
+            "value": ""
+        },
+        "existingAppServicePlanLocation": {
+            "value": ""
+        },
+        "newAppServicePlanName": {
+            "value": "asp-warbasicbot"
+        },
+        "newAppServicePlanLocation": {
+            "value": "East US 2"
+        },
+        "newAppServicePlanSku": {
+            "value": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            }
+        },
+        "appType": {
+            "value": "UserAssignedMSI"
+        },
+        "appId": {
+            "value": "22ce8e89-6f22-4651-8de0-a67ec5abfd61"
+        },
+        "appSecret": {
+            "value": ""
+        },
+        "tenantId": {
+            "value": ""
+        },
+        "UMSIName": {
+            "value": "id-bot-rg_botframework_basics"
+        },
+        "UMSIResourceGroupName": {
+            "value": "rg_botframework_basics"
+        }
+    }
+}
